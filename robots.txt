@@ -1,0 +1,9 @@
+# ------------------------------------------
+# NCRM . -- http://www.ncrm.com
+# Robot Exclusion File -- robots.txt
+# Author:  NCRM
+# Last Updated:  17/11/06 
+# ------------------------------------------
+
+User-agent: *
+Disallow: /

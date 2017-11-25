@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<module>
+  <type>language</type>
+  <name>British English</name>
+  <label>British English</label>
+  <prefix>en_gb</prefix>
+  <version>1.0.0</version>
+	<dependencies>
+		<ncrm_version>6.1.0</ncrm_version>
+		<ncrm_max_version>6.*</ncrm_max_version>
+	</dependencies>
+  <license>
+   <inline><![CDATA[
+ ********************************************************************************
+ ** The contents of these files are subject to the NCRM Public License
+  * Version 1.0. You may not use this file except in compliance with the License
+  * The Original Code is:  NCRM Open Source
+  * The Initial Developer of the Original Code is ncrm.
+  * Portions created by ncrm are Copyright (C) ncrm.
+  * All Rights Reserved.
+ ********************************************************************************
+ *  Language     : British English
+ *  Version      : 1.0.0
+ *  Author       : Alan Lord. Libertus Solutions - http://www.libertus.co.uk
+ ********************************************************************************
+]]></inline>
+  </license>
+</module>

@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>ncrm_quickview</name>
+			<sql><![CDATA[CREATE TABLE `ncrm_quickview` (
+  				`fieldid` int(19) NOT NULL,
+  				`related_fieldid` int(19) NOT NULL,
+  				`sequence` int(19) NOT NULL,
+  				`view` int(19) NOT NULL,
+  				CONSTRAINT fk_1_ncrm_quickview FOREIGN KEY (`fieldid`) REFERENCES `ncrm_field` (`fieldid`) ON DELETE CASCADE
+			)]]></sql>
+		</table>
+	</tables>
+</schema>

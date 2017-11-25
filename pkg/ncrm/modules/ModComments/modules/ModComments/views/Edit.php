@@ -1,0 +1,21 @@
+<?php
+/*+***********************************************************************************
+ * The contents of this file are subject to the NCRM Public License Version 1.0
+ * ("License"); You may not use this file except in compliance with the License
+ * The Original Code is:  NCRM Open Source
+ * The Initial Developer of the Original Code is ncrm.
+ * Portions created by ncrm are Copyright (C) ncrm.
+ * All Rights Reserved.
+ *************************************************************************************/
+
+Class ModComments_Edit_View extends Ncrm_Edit_View {
+
+	public function checkPermission(Ncrm_Request $request) {
+		$currentUserModel = Users_Record_Model::getCurrentUserModel();
+		$moduleName = $request->getModule();
+		$record = $request->get('record');
+		if (!empty($record) || !Users_Privileges_Model::isPermitted($moduleName, 'EditView')) {
+			throw new AppException('LBL_PERMISSION_DENIED');
+		}
+	}
+}

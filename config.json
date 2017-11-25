@@ -1,0 +1,12 @@
+{
+  "db_server"     : "localhost",
+  "db_port"       : ":3306",
+  "db_username"   : "root",
+  "db_password"   : "",
+  "db_name"       : "newcrm_dev_fb",
+  "db_type"       : "mysqli",
+  "db_status"     : "true",
+  "site_url"      : "http://newcrm.dev/fb/",
+  "root_dir"      : "D:\\LynxServer\\sites\\newcrm.dev\\fb/",
+  "crm_name"      : "MASCO"
+}
