@@ -25,7 +25,11 @@ class Webform_Capture {
 		$currentLanguage = Ncrm_Language_Handler::getLanguage();
 		$moduleLanguageStrings = Ncrm_Language_Handler::getModuleStringsFromFile($currentLanguage);
 		vglobal('app_strings', $moduleLanguageStrings['languageStrings']);
-		
+
+		if(isset($request['link'])) {
+			$request['cf_769'] = $request['link'];
+		}
+
 		$returnURL = false;
 		try {
 			if(!vtlib_isModuleActive('Webforms')) throw new Exception('webforms is not active');
