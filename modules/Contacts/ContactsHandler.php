@@ -89,10 +89,11 @@ function Contacts_UpdateUTMFields($entityData){
     $link = $entityData->get('cf_769');
 
     if(empty($link)) return false;
+    $paramPath = explode('?', $link);
 
     // http://fid.topica.vn?utm_source=facebook&utm_team=FID40&utm_agent=FID40&utm_term=FID40&utm_medium=cpm&utm_content=Maits_CVS02_L2-1%_Mol1_BQTC_CBH2_V9
 
-    parse_str($link, $params);
+    parse_str($paramPath[1], $params);
 
     $utmSource = isset($params['utm_source']) ? $params['utm_source'] : '';
     $utmTeam = isset($params['utm_team']) ? $params['utm_team'] : '';
