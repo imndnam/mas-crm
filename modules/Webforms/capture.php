@@ -88,7 +88,8 @@ class Webform_Capture {
 	}
 
 	protected function sendResponse($url, $success=false, $failure=false) {
-		if (empty($url)) {
+        header('Access-Control-Allow-Origin: *');
+        if (empty($url)) {
 			if ($success) $response = Zend_Json::encode(array('success' => true, 'result' => $success));
 			else $response = Zend_Json::encode(array('success' => false, 'error' => array('message' => $failure)));
 
