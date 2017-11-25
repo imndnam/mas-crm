@@ -86,7 +86,7 @@ function Contacts_UpdateUTMFields($entityData){
     $wsId = $entityData->getId();
     $parts = explode('x', $wsId);
     $entityId = $parts[1];
-    $link = $entityData->get('link');
+    $link = $entityData->get('cf_769');
 
     if(empty($link)) return false;
 
