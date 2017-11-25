@@ -58,6 +58,7 @@ class Ncrm_Paging_Model extends Ncrm_Base_Model {
 	function getStartIndex() {
 		$currentPage = $this->getCurrentPage();
 		$pageLimit = $this->getPageLimit();
+        $this->set('prevPageExists', true);
 		return ($currentPage-1)*$pageLimit;
 	}
 

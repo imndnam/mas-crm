@@ -123,7 +123,7 @@ $upload_badext = array('php', 'php3', 'php4', 'php5', 'pl', 'cgi', 'py', 'asp', 
 $includeDirectory = $root_directory.'include/';
 
 // list_max_entries_per_page default value = 20
-$list_max_entries_per_page = '5';
+$list_max_entries_per_page = '20';
 
 // limitpage_navigation default value = 5
 $limitpage_navigation = '5';
