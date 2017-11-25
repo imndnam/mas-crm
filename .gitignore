@@ -1,1 +1,6 @@
 /.idea/
+/storage/
+/user_privileges/
+/logs/
+/cache/
+config.json
