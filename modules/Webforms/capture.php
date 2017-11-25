@@ -27,7 +27,7 @@ class Webform_Capture {
 		vglobal('app_strings', $moduleLanguageStrings['languageStrings']);
 
 		if(isset($request['link'])) {
-			$request['cf_769'] = $request['link'];
+			$request['label:Link'] = $request['link'];
 		}
 
 		$returnURL = false;
@@ -116,7 +116,6 @@ class Webform_Capture {
 }
 
 // NOTE: Take care of stripping slashes...
-file_put_contents("post.txt", json_encode($_REQUEST));
 $webformCapture = new Webform_Capture();
 $webformCapture->captureNow($_REQUEST);
 ?>
