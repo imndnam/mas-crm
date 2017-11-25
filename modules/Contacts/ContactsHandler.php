@@ -79,4 +79,29 @@ function Contacts_sendCustomerPortalLoginDetails($entityData){
 	}
 }
 
+
+function Contacts_UpdateUTMFields($entityData){
+    $adb = PearDatabase::getInstance();
+    $moduleName = $entityData->getModuleName();
+    $wsId = $entityData->getId();
+    $parts = explode('x', $wsId);
+    $entityId = $parts[1];
+    $link = $entityData->get('link');
+
+    if(empty($link)) return false;
+
+    // http://fid.topica.vn?utm_source=facebook&utm_team=FID40&utm_agent=FID40&utm_term=FID40&utm_medium=cpm&utm_content=Maits_CVS02_L2-1%_Mol1_BQTC_CBH2_V9
+
+    parse_str($link, $params);
+
+    $utmSource = isset($params['utm_source']) ? $params['utm_source'] : '';
+    $utmTeam = isset($params['utm_team']) ? $params['utm_team'] : '';
+    $utmAgent = isset($params['utm_agent']) ? $params['utm_agent'] : '';
+    $utmTerm = isset($params['utm_term']) ? $params['utm_term'] : '';
+    $utmMedium = isset($params['utm_medium']) ? $params['utm_medium'] : '';
+    $utmContent = isset($params['utm_content']) ? $params['utm_content'] : '';
+
+    $adb->pquery("UPDATE ncrm_contactscf SET cf_755 = ?, cf_757 = ?, cf_759 = ?, cf_761 = ?, cf_763 = ?, cf_765 = ? WHERE contactid = ?", array($utmSource, $utmTeam, $utmAgent, $utmTerm, $utmMedium, $utmContent, $entityId));
+}
+
 ?>
